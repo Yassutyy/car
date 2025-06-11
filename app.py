@@ -3,7 +3,7 @@ import numpy as np
 import pickle
 
 # Load model and encoders
-with open("model.pkl", "rb") as f:
+with open("car_price_model.pkl", "rb") as f:
     model = pickle.load(f)
 
 with open("brand_encoder.pkl", "rb") as f:
@@ -29,5 +29,5 @@ if st.button("Predict Price"):
     input_data = np.array([[brand_encoded, year, km_driven, fuel_encoded]])
 
     # Predict
-    prediction = model.predict(input_data)[0]
+    prediction = car_price_model.predict(input_data)[0]
     st.success(f"Estimated Selling Price: ₹{int(prediction):,}")
