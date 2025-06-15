@@ -14,7 +14,7 @@ with open("fuel_encoder.pkl", "rb") as f:
 
 # UI
 st.title("Car Price Predictor")
-st.header("Developed by B.Yaswanth, A.Dinesh, Baji")
+st.caption("Developed by B.Yaswanth, A.Dinesh, Baji.")
 st.markdown("Upload car details to predict its selling price using a trained multiple linear regression model.")
 
 brand = st.selectbox("Select Brand", brand_encoder.classes_)
