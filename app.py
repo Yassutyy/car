@@ -13,7 +13,7 @@ with open("fuel_encoder.pkl", "rb") as f:
     fuel_encoder = pickle.load(f)
 
 # UI
-st.title("🚗 Car Price Predictor")
+st.title("Car Price Predictor")
 st.markdown("Upload car details to predict its selling price using a trained multiple linear regression model.")
 
 brand = st.selectbox("Select Brand", brand_encoder.classes_)
